@@ -1,2 +1,2 @@
 # Eshop.in
-A ecommerec platform
+A ecommerce platform
