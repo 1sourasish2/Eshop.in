@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Membership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #111, #222);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .premium-container {
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-container h2 {
+            font-size: 28px;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plan-box {
+            background: linear-gradient(135deg, #333, #111);
+            padding: 30px;
+            width: 22%;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+            border: 2px solid #ddbf12;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            position: relative;
+        }
+
+        .plan-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+        }
+
+        .plan-box h3 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: #ffd700;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: white;
+        }
+
+        .subscribe-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #ffd700;
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .subscribe-btn:hover {
+            background: #111;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        @media (max-width: 900px) {
+            .plans {
+                flex-wrap: wrap;
+            }
+            .plan-box {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .plan-box {
+                width: 80%;
+            }
+        }
+        .footer-cities {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-cities ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(10, 2fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.footer-cities li {
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.footer-cities a {
+    text-decoration: none;
+    color: white;
+    }
+.footer-cities li:hover {
+        transition: background 0.2s;
+        color: #ffd987;
+}
+
+.footer-language {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-language select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="premium-container">
+        <h2>Upgrade to Premium</h2>
+           <h1>EShop.in</h1>
+        <div class="plans">
+            <div class="plan-box">
+                <h3>Weekly</h3>
+                <p class="price">₹49</p>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-box">
+                <h3>Monthly</h3>
+                <p class="price">₹149</p>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-box">
+                <h3>3 Months</h3>
+                <p class="price">₹299</p>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-box">
+                <h3>6 Months</h3>
+                <p class="price">₹499</p>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-box">
+                <h3>Yearly</h3>
+                <p class="price">₹699</p>
+                <a href="#" class="subscribe-btn">Subscribe</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-cities">
+            <h3>We are available in:</h3>
+            <ul>
+                <li>Delhi</li><li>Mumbai</li><li>Bangalore</li><li>Hyderabad</li><li>Chennai</li>
+                <li>Kolkata</li><li>Pune</li><li>Ahmedabad</li><li>Jaipur</li><li>Lucknow</li>
+                <li>Chandigarh</li><li>Indore</li><li>Bhopal</li><li>Visakhapatnam</li><li>Surat</li>
+                <li>Vadodara</li><li>Coimbatore</li><li>Guwahati</li><li>Thiruvananthapuram</li><li>Patna</li>
+                <li>Ranchi</li><li>Bhubaneswar</li><li>Nagpur</li><li>Vijayawada</li><li>Madurai</li>
+                <li>Varanasi</li><li>Raipur</li><li>Meerut</li><li>Nashik</li><li>Jodhpur</li>
+            </ul>
+        </div>
+        
+        <div class="footer-language">
+            <label for="language-select">Choose Language:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="bn">বাংলা</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="mr">मराठी</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="ml">മലയാളം</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="pa">ਪੰਜਾਬੀ</option>
+            </select>
+        </div>
+    </footer>
+</body>
+</html>

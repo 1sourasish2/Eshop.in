@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Eshop.in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            text-align: center;
+            background: linear-gradient(135deg, #11111d, #1e1e8a);
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(90deg, #004b99, #002e66);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* Cart Container */
+        .cart-container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .cart-item:hover {
+            transform: scale(1.02);
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        button {
+            background: linear-gradient(90deg, #007aff, #005bb5);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #005bb5, #004494);
+            transform: scale(1.05);
+        }
+
+        .cart-summary {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .checkout {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="WhatsApp Image 2025-04-24 at 23.21.26.jpeg" alt="Eshop Logo">
+            <span>Eshop.in</span>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="product1.jpg" alt="Product 1">
+                <div class="item-details">
+                    <h3>Product Name</h3>
+                    <p>₹1999</p>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <input type="number" value="1">
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove-item">Remove</button>
+            </div>
+            
+            <div class="cart-item">
+                <img src="product2.jpg" alt="Product 2">
+                <div class="item-details">
+                    <h3>Another Product</h3>
+                    <p>₹2499</p>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <input type="number" value="1">
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: ₹4498</p>
+            <input type="text" placeholder="Apply Coupon Code">
+            <button class="apply-coupon">Apply</button>
+            <button class="checkout">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eshop.in. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".minus").forEach(btn => {
+            btn.addEventListener("click", () => {
+                let input = btn.nextElementSibling;
+                if (input.value > 1) input.value--;
+            });
+        });
+
+        document.querySelectorAll(".plus").forEach(btn => {
+            btn.addEventListener("click", () => {
+                let input = btn.previousElementSibling;
+                input.value++;
+            });
+        });
+
+        document.querySelectorAll(".remove-item").forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.parentElement.remove();
+            });
+        });
+    </script>
+
+</body>
+</html>

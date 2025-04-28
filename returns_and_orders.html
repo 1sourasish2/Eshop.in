@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Orders | Eshop</title>
+    <style>
+        /* Global Styles */
+       /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Dark Gradient Background */
+body {
+    text-align: center;
+    background: linear-gradient(135deg, #11111d, #1e1e8a);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #004b99, #002e66);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Sections */
+main {
+    padding: 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.04);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #007aff, #005bb5);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #005bb5, #004494);
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #007aff;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Cities */
+.footer-cities {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-radius: 10px;
+}
+
+.footer-cities ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-cities li {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+/* Language Selector */
+.footer-language {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-radius: 10px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        Eshop Returns & Orders
+    </header>
+
+    <main>
+        <section class="order-status">
+            <h2>Track Your Order</h2>
+            <input type="text" placeholder="Enter Order ID">
+            <button>Track Order</button>
+        </section>
+
+        <section class="returns">
+            <h2>Return or Replace Items</h2>
+            <p>Select an item from your order history to return or replace.</p>
+            <button>View Order History</button>
+        </section>
+
+        <section class="refund-policy">
+            <h2>Refund Policy</h2>
+            <p>We ensure a hassle-free return and refund process. Read our refund guidelines for details.</p>
+            <a href="#">Learn More</a>
+        </section>
+    </main>
+
+    <div class="footer-cities">
+        <h3>We are available in:</h3>
+        <ul>
+            <li>Delhi</li><li>Mumbai</li><li>Bangalore</li><li>Hyderabad</li><li>Chennai</li>
+            <li>Kolkata</li><li>Pune</li><li>Ahmedabad</li><li>Jaipur</li><li>Lucknow</li>
+            <li>Chandigarh</li><li>Indore</li><li>Bhopal</li><li>Visakhapatnam</li><li>Surat</li>
+            <li>Vadodara</li><li>Coimbatore</li><li>Guwahati</li><li>Thiruvananthapuram</li><li>Patna</li>
+            <li>Ranchi</li><li>Bhubaneswar</li><li>Nagpur</li><li>Vijayawada</li><li>Madurai</li>
+            <li>Varanasi</li><li>Raipur</li><li>Meerut</li><li>Nashik</li><li>Jodhpur</li>
+        </ul>
+    </div>
+
+    <div class="footer-language">
+        <label for="language-select">Choose Language:</label>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="bn">বাংলা</option>
+            <option value="ta">தமிழ்</option>
+            <option value="te">తెలుగు</option>
+            <option value="mr">मराठी</option>
+        </select>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-column">
+            <h3>Helpful Links</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

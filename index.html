@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EShop.in - Premium Product Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Link the external JavaScript file -->
+    
+</head>
+
+<body>
+    
+    <!-- Navigation Bar -->
+
+    <header class="header"> 
+        <div class="company-location"> 
+          <h1 class="logo">
+            <img src="WhatsApp Image 2025-04-24 at 23.21.26.jpeg" alt="Eshop.in Logo">
+        </h1>
+        <span><i class="fas fa-map-marker-alt"></i> Delivering to Kolkata 700092</span>         
+        <button onclick="updateLocation()" class="change-location-btn">Change</button>
+                </div>
+         
+        <div class="header-right"> 
+          <div class="search-bar"> 
+            <input type="text" id="search-input" placeholder="Search Eshop.in" /> 
+            <i class="fas fa-search"></i> 
+          </div> 
+          <div class="account-cart"> 
+            <a href="login.html" target="_blank"><i class="fas fa-user"></i> Hello, sign in</a> 
+            <a href="account.html" target="_blank"><i class="fas fa-list"></i> Account & Lists</a> 
+            <a href="returns_and_orders.html" target="_blank"><i class="fas fa-history"></i> Returns & Orders</a> 
+            <a href="cart.html" target="_blank"><i class="fas fa-shopping-cart"></i> Cart (0)</a> 
+          </div> 
+        </div> 
+        <!-- Mobile Menu Toggle Button -->
+  
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display: none; background: #f9f9f9; padding: 10px;">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><button onclick="closeMenu()">Close</button></li>
+    </ul>
+  </div>
+      </header>
+    
+      <div class="chatbot">
+        <button class="chat-btn" onclick="openChatbot()">
+          <i class="fas fa-comment-dots"></i>
+        </button>
+        <div id="chatbot-container" class="chatbot-container">
+          <div class="chatbot-header">
+            <span>Chatbot</span>
+            <button onclick="closeChatbot()" style="background: none; color: white; border: none;">X</button>
+          </div>
+          <div class="chatbot-body">
+            <div class="messages"></div>
+            <input type="text" id="user-input" placeholder="Type a message..." onkeydown="handleKeyPress(event)" />
+          </div>
+        </div>
+      </div>
+
+    <!--Sales-->
+    <div class="flash-sale">
+        <h2>🔥 Flash Sale Ends In:</h2>
+        <div class="countdown" id="countdown"></div>
+
+        <h2>Latest Blog Posts</h2>
+        <input type="text" class="search-bar" placeholder="Search blogs...">
+        <div class="tags">
+            <button>Smartphones</button>
+            <button>Watches</button>
+            <button>Headphones</button>
+        </div>
+        <div class="blog-container">
+            <div class="blog-card">
+                <img src="blog1.jpg" alt="Guide to Choosing the Best Smartphone">
+                <div class="blog-content">
+                    <h3>Guide to Choosing the Best Smartphone</h3>
+                    <p>Find out what features to look for when buying a new phone.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="blog2.jpg" alt="Top 5 Stylish Watches for 2025">
+                <div class="blog-content">
+                    <h3>Top 5 Stylish Watches for 2025</h3>
+                    <p>Discover the latest trends in wristwatches this year.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="blog3.jpg" alt="Headphones Buying Guide">
+                <div class="blog-content">
+                    <h3>Headphones Buying Guide</h3>
+                    <p>Learn how to choose the best headphones for your needs.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--limited deal-->
+        <span class="limited-deal">Hurry! Offer ends in 2h 30m</span>
+
+        
+    <div class="container">
+        <!-- Product 1 -->
+    
+        <div class="product-card">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/x/e/l/m-se01-formal-shirt-youth-first-original-imah4fqqzrcd3jmk.jpeg?q=70" alt="Men's Shirt" class="product-image">
+            <div class="product-info">
+              <h2 class="product-title">Men's Formal Shirt</h2>
+              <p class="product-price">₹1,999</p>
+              <button class="add-to-cart">Add to Cart</button>
+              <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+            </div>
+          </div>
+          
+
+        <!-- Product 2 -->
+         
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/q/8/u/3xl-new-shirt-funday-fashion-original-imahyvwhfbu3nska.jpeg?q=70" alt="Women's Shirt" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Women's Casual Shirt</h2>
+                    <p class="product-price"> ₹1,499</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+                </div>
+            </div>
+        
+
+        <!-- Product 3 -->
+        <!-- Product 3: Smartwatch -->
+    <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/n/m/6/27-t800-ultra-smartwatch-ap036-android-ios-bexcel-yes-original-imah8bgywg4aksun.jpeg?q=70" alt="Smartwatch" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Smartwatch</h2>
+            <p class="product-price">₹5,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+<!-- Product 4: Gaming Laptop -->
+    <div class="product-card">
+        <img src="https://t4.ftcdn.net/jpg/07/48/51/51/240_F_748515102_p0UNMyTxdIXsJHJwyd43nH9bnM5SODU4.jpg" alt="Laptop" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Gaming Laptop</h2>
+            <p class="product-price"> ₹75,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+       <!-- Product 5: Wireless Headphones -->
+    <div class="product-card">
+        <img src="https://t4.ftcdn.net/jpg/05/81/81/35/240_F_581813566_e4ywdbkTYvxMbcDOL6ejx5WcYdySQeZj.jpg" alt="Headphones" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Wireless Headphones</h2>
+            <p class="product-price">₹3,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+</a>
+
+<!-- Product 6: Running Shoes -->
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1562183241-b937e95585b6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cnVubmluZyUyMHNob2VzfGVufDB8fDB8fHww" alt="Sports Shoes" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Running Shoes</h2>
+            <p class="product-price"> ₹2,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+<!-- Product 7: Premium Football -->
+    <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-ball/d/a/x/5-qatar-fifa-worldcup-football-22-1-football-owlix-original-imah8qfmeuhqghhh.jpeg?q=70" alt="Football" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Premium Football</h2>
+            <p class="product-price">₹1,299</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+<!-- Product 8: Cricket Bat -->
+
+<div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/bat/g/1/6/1-grey-nicolls-handcrafted-finest-long-handle-1-grade-1-willow-original-imaguegghxhqcnwp.jpeg?q=70" alt="Cricket Bat" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Cricket Bat</h2>
+            <p class="product-price">₹3,499</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+       <!-- Product 9: Elegant Jewellery Set -->
+    <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-jewellery-set/5/z/a/x21-lt-sm21-cp-od-kc-mangalsutra-earring-set-yembon-original-imagzbrzz5a4d5mq.jpeg?q=70" alt="Jewellery" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Elegant Jewellery Set</h2>
+            <p class="product-price">₹9,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+<!-- Product 10: Smart Phone -->
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61OEiDN4RPL._AC_UY436_FMwebp_QL65_.jpg" alt="Smart phone" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Smart Phone</h2>
+            <p class="product-price">₹25,999</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+<!-- Product 11: Wrist Watches -->
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71HJ7GBPcKL._AC_UL640_FMwebp_QL65_.jpg" alt="Watches" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Wrist Watches</h2>
+            <p class="product-price">₹799</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+<!-- Product 12: Tables -->
+
+    <div class="product-card">
+        <img src="image.png" alt="Table" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Tables</h2>
+            <p class="product-price"> ₹299</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+<!-- Product 13: Classic Mobile Covers -->
+
+    <div class="product-card">
+        <img src="image.png" alt="phone cover" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Classic Mobile Covers</h2>
+            <p class="product-price">₹239</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <i class="fa-regular fa-heart like-btn" onclick="toggleLike(this)"></i>
+        </div>
+    </div>
+
+
+
+    </div>
+     
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-cities">
+            <h3>We are available in:</h3>
+            <ul>
+                <li>Delhi</li><li>Mumbai</li><li>Bangalore</li><li>Hyderabad</li><li>Chennai</li>
+                <li>Kolkata</li><li>Pune</li><li>Ahmedabad</li><li>Jaipur</li><li>Lucknow</li>
+                <li>Chandigarh</li><li>Indore</li><li>Bhopal</li><li>Visakhapatnam</li><li>Surat</li>
+                <li>Vadodara</li><li>Coimbatore</li><li>Guwahati</li><li>Thiruvananthapuram</li><li>Patna</li>
+                <li>Ranchi</li><li>Bhubaneswar</li><li>Nagpur</li><li>Vijayawada</li><li>Madurai</li>
+                <li>Varanasi</li><li>Raipur</li><li>Meerut</li><li>Nashik</li><li>Jodhpur</li>
+            </ul>
+        </div>
+        
+        <div class="footer-language">
+            <label for="language-select">Choose Language:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="bn">বাংলা</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="mr">मराठी</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="ml">മലയാളം</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="pa">ਪੰਜਾਬੀ</option>
+            </select>
+        </div>
+        <div class="membership">
+           <p><a href="premium.html" class="premium-btn"><i class="fas fa-crown"></i>Premium membership</a></p>
+        </div>
+
+        <footer class="footer-container">
+            <div class="footer-column">
+                <h3>Helpful Links</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@eshop.in">support@eshop.in</a></p>
+                <p>Phone: <a href="tel:+5551234567">(555) 123-4567</a></p>
+                <p>Address: 123 Shop Street</p>
+            </div>
+            <p>&copy; <span id="current-year"></span> eshop.in. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
